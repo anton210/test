@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <StartArguments>"c:\Users\toxa\projects\FormConverter\FormConverter\Keyboard Controller PMI - USAFE.xsn"  C:\Users\toxa\projects\FormConverter\FormConverter\OUT\KEYBOARD.html</StartArguments>
+    <StartArguments>"f:\FormsForTest\Keyboard Controller PMI - USAFE.xsn"    c:\Users\toxa\projects\git_github.com_anton210_test.git\test\FormConverter\OUT\KEYBOARD.html</StartArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <StartArguments>"c:\Users\toxa\projects\FormConverter\FormConverter\Keyboard Controller PMI - USAFE.xsn"  C:\Users\toxa\projects\FormConverter\FormConverter\OUT\KEYBOARD.html</StartArguments>
+    <StartArguments>"f:\FormsForTest\Keyboard Controller PMI - USAFE.xsn"    c:\Users\toxa\projects\git_github.com_anton210_test.git\test\FormConverter\OUT\KEYBOARD.html</StartArguments>
   </PropertyGroup>
   <PropertyGroup>
     <PublishUrlHistory>publish\</PublishUrlHistory>

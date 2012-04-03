@@ -158,7 +158,7 @@ namespace FormConverter
 
         }
 
-        private static void ApplySignboxMods(XmlDocument document, XmlNamespaceManager xmlns)
+        public static void ApplySignboxMods(XmlDocument document, XmlNamespaceManager xmlns)
         {
             var body = (XmlElement) document.DocumentElement.SelectSingleNode("//body");
             

@@ -1,0 +1,339 @@
+
+* {
+    /*font-family: inherit;*/
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    /*padding: 0.125em 0 0.125em 0;*/
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.inner-cell {
+    background-color: #f7f7f7 !important;
+    padding: 0.75em 0.5em;
+}
+
+.inner-cell:not(.cell-right) {
+    border-right-style: none !important;
+}
+
+.inner-cell:not(.cell-bottom) {
+    border-bottom-style: none !important;    
+}
+
+.outher-cell {
+    border-style: none !important;
+}
+
+.cell-top {
+    -moz-box-shadow:inset 0 1px #e4e4e4;
+    -webkit-box-shadow:inset 0 1px #e4e4e4;
+    box-shadow:inset 0 1px #e4e4e4;    
+}
+
+.cell-bottom {
+    -moz-box-shadow: 0 1px #fcfcfd;
+    -webkit-box-shadow: 0 1px #fcfcfd;
+    box-shadow: 0 1px #fcfcfd;    
+}
+
+
+.ui-slider {
+    width: 80px !important;
+
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    
+    -moz-border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    border-radius: 4px !important;
+}
+
+.ui-slider .ui-btn-corner-left {
+    -moz-border-radius-topleft: 3px !important;
+    -webkit-border-top-left-radius: 3px !important;
+    border-top-left-radius: 3px !important;
+
+    -moz-border-radius-bottomleft: 3px !important;
+    -webkit-border-bottom-left-radius: 3px !important;
+    border-bottom-left-radius: 3px !important;
+}
+
+.ui-slider .ui-btn-corner-right {
+    -moz-border-radius-topright: 3px !important;
+    -webkit-border-top-right-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+
+    -moz-border-radius-bottomright: 3px !important;
+    -webkit-border-bottom-right-radius: 3px !important;
+    border-bottom-right-radius: 3px !important;
+}
+
+.ui-slider .ui-btn-corner-all {
+    -moz-border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    border-radius: 4px !important;
+}
+
+.ui-slider .ui-btn-up-c {
+    border: 1px solid #9c9c9c !important;
+
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#cdcdcd),to(#fbfbfb)) !important;
+    background-image: -webkit-linear-gradient(#cdcdcd,#fbfbfb) !important;
+    background-image: -moz-linear-gradient(#cdcdcd,#fbfbfb) !important;
+    background-image: -ms-linear-gradient(#cdcdcd,#fbfbfb) !important;
+    background-image: -o-linear-gradient(#cdcdcd,#fbfbfb) !important;
+    background-image: linear-gradient(#cdcdcd,#fbfbfb) !important;
+
+    -moz-box-shadow: inset 0 1px #f0f0f0;
+    -webkit-box-shadow: inset 0 1px #f0f0f0;
+    box-shadow: inset 0 1px #f0f0f0;
+}
+
+.ui-slider .ui-btn-hover-c {
+    border: 1px solid #9c9c9c !important;
+
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#b2b2b2),to(#e0e0e0)) !important;
+    background-image: -webkit-linear-gradient(#b2b2b2,#e0e0e0) !important;
+    background-image: -moz-linear-gradient(#b2b2b2,#e0e0e0) !important;
+    background-image: -ms-linear-gradient(#b2b2b2,#e0e0e0) !important;
+    background-image: -o-linear-gradient(#b2b2b2,#e0e0e0) !important;
+    background-image: linear-gradient(#b2b2b2,#e0e0e0) !important;
+
+    -moz-box-shadow: inset 0 1px 3px #d6d6d6;
+    -webkit-box-shadow: inset 0 1px 3px #d6d6d6;
+    box-shadow: inset 0 1px 3px #d6d6d6;
+}
+
+.ui-slider div.ui-btn-active {
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#3066C5),to(#76ADFC)) !important;
+    background-image: -webkit-linear-gradient(#3066C5,#76ADFC) !important;
+    background-image: -moz-linear-gradient(#3066C5,#76ADFC) !important;
+    background-image: -ms-linear-gradient(#3066C5,#76ADFC) !important;
+    background-image: -o-linear-gradient(#3066C5,#76ADFC) !important;
+    background-image: linear-gradient(#3066C5,#76ADFC) !important;
+
+}
+
+.ui-slider div.ui-btn-down-c {
+    background-image: -webkit-gradient(linear,left top,left bottom, from(#dfdfdf),color-stop(49%, #efefef), color-stop(51%, #f6f6f6), to(#fefefe)) !important;
+    background-image: -webkit-linear-gradient(#dfdfdf, #efefef 49%, #f6f6f6 51%, #fefefe ) !important;
+    background-image: -moz-linear-gradient(#dfdfdf, #efefef 49%, #f6f6f6 51%, #fefefe) !important;
+    background-image: -ms-linear-gradient(#dfdfdf, #efefef 49%, #f6f6f6 51%, #fefefe) !important;
+    background-image: -o-linear-gradient(#dfdfdf, #efefef 49%, #f6f6f6 51%, #fefefe) !important;
+    background-image: linear-gradient(#dfdfdf, #efefef 49%, #f6f6f6 51%, #fefefe) !important;
+
+    -moz-box-shadow: inset 0 1px 3px #b6b6b6;
+    -webkit-box-shadow: inset 0 1px 3px #b6b6b6;
+    box-shadow: inset 0 1px 3px #b6b6b6;
+}
+
+.ui-slider .ui-btn-up-c,
+.ui-slider .ui-btn-down-c {
+    
+}
+
+.ui-slider .ui-btn-down-c {
+    color: #767676 !important;
+    text-shadow: 0 1px white !important; 
+}
+
+span.ui-slider-label {
+    line-height: 26px !important;
+    font-weight: bold !important;
+    font-family: Courier New !important;
+    font-size: 16px !important;
+}
+
+div.ui-slider-switch {
+    height: 26px !important;
+}
+
+div.ui-slider-switch a.ui-slider-handle {
+    height: 26px !important;
+    margin-top: -1px !important;
+    margin-left: -17px !important;
+}
+
+div.ui-slider-inneroffset {
+    width: 52px !important;
+}
+
+.ui-slider span.ui-slider-label {
+    height: 26px !important;
+}
+
+
+strong, font {
+    width: auto;
+}
+
+strong {
+    font-weight: bolder;
+}
+
+table.xdLayout {
+    width: 100%;
+}
+
+table {
+    font: inherit;
+    color: inherit;
+    border: 0;
+    -webkit-border-horizontal-spacing: 0;
+    -webkit-border-vertical-spacing: 0;
+}
+
+td, th {
+    width: auto;
+    display: inline-block;
+    padding: 0.75em 0;
+    float: left;
+    border: 0;
+}
+
+.ui-body-a th,
+.ui-body-a td {
+    border-color: White !important;
+}
+
+.ui-body-c {
+    border-color: #b8bbbf !important;
+    background: #d7d9df !important;
+    background-image: none !important;
+}
+
+.ui-body-c th,
+.ui-body-c td {
+    border-color: #B7B9BD !important;
+}
+
+td div, th div {
+    display: inline-block;
+}
+
+div.xdSection {
+    display: block;
+    width: 100%;
+    height: auto !important;
+}
+
+
+body {
+    font-size: 0.84em;
+    /*font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;*/
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.textarea-container {
+    height: 100%;
+}
+
+/*
+.ui-page {
+    width: 760px !important;
+    padding: 4px !important;
+}
+*/
+
+.ui-body-c input.ui-input-text,
+.ui-body-c textarea.ui-input-text,
+.ui-body-c .ui-radio .ui-btn {
+    background-color: #fafafa !important;
+    border: 1px solid #9C9C9C !important;
+
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.2), 0 1px #fcfcfd;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.2), 0 1px #fcfcfd;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.2), 0 1px #fcfcfd;
+}
+
+.ui-radio {
+    min-width: 26px;
+    width: auto;
+
+    padding-right: 0.15em !important;
+    padding-left: 0.15em !important;
+}
+
+.ui-radio .ui-btn {
+    border-radius: 20px !important;
+}
+
+.ui-radio .ui-btn-inner {
+    min-height: 18px;
+    padding: 3px !important;
+    border-top-style: none !important;
+}
+
+.ui-radio .ui-icon {
+    left: 50% !important;
+    top: 50% !important;
+    margin-left: -9px !important;
+    margin-top: -9px !important;
+}
+
+.ui-radio input {
+    left: 50% !important;
+    margin-top: -5px !important;
+    margin-left: -5px !important
+}
+
+.checkbox-wrapper {
+    display: block;
+    min-width: 80px !important;
+    position: relative;
+    height: auto;
+    padding: 2px;
+}
+
+.checkbox-wrapper font {
+    white-space: nowrap;
+}
+
+.checkbox-wrapper .ui-checkbox {
+    display: none !important;
+}
+
+div.ui-slider-switch div.ui-slider-labelbg-a,
+div.ui-slider-switch div.ui-slider-labelbg-b {
+    width: 70% !important;
+}
+
+div {
+    width: 100%;
+}
+
+span.xdTextBox {
+    width: 100%;
+} 
+
+.sigWrapper {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+}
+
+.sigwrapper.current {
+    border-style: none;
+}
+
+.signLink img {
+    background-color: #FAFAFA !important;
+    border: 1px solid #9C9C9C !important;
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.2), 0 1px #fcfcfd;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.2), 0 1px #fcfcfd;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.2), 0 1px #fcfcfd;
+}
+
+/*TODO this style changes width of all jQuery dialogs. Need to change. */
+.ui-dialog-contain
+{
+	width: 430px !important; 
+}

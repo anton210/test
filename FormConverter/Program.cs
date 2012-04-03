@@ -54,6 +54,7 @@ namespace FormConverter
             var xmlns = new XmlNamespaceManager(transformedViewXml.NameTable);
             xmlns.AddNamespace("xd", @"http://schemas.microsoft.com/office/infopath/2003");
             IPadTransformProcessor.ApplyTableModes(transformedViewXml, xmlns);
+            //IPadTransformProcessor.ApplySignboxMods(transformedViewXml, xmlns);
 
             //double adj = IPadTransformProcessor.CalculateWidthAdjustment(transformedViewXml);
             //IPadTransformProcessor.RemoveStyleAttribute(transformedViewXml.DocumentElement, adj);

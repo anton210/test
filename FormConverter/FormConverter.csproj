@@ -106,9 +106,6 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TextFile1.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Files\transformView.xsl" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
