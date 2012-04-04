@@ -7,7 +7,7 @@ using System.IO;
 
 namespace FormConverter
 {
-    class DocumentsProvider
+    class ResourcesManager
     {
 
         static public XmlDocument GetDocumentXml(string name)

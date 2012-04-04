@@ -6,13 +6,13 @@ using System.IO;
 using System.Xml;
 using System.Xml.Xsl;
 
-namespace FormConverter
+namespace FormConverter.Xsl
 {
     class XslTransformer
     {
         public static MemoryStream Transform(string transformationName, Stream template, XsltArgumentList arguments)
         {
-            return Transform(DocumentsProvider.GetDocument(transformationName), template, arguments);
+            return Transform(ResourcesManager.GetDocument(transformationName), template, arguments);
         }
 
         public static MemoryStream Transform(Stream transformation, Stream template, XsltArgumentList arguments)
@@ -36,7 +36,7 @@ namespace FormConverter
 
         public static MemoryStream Transform(string transformationName, string templateName, XsltArgumentList arguments)
         {
-            return Transform(DocumentsProvider.GetDocument(transformationName), DocumentsProvider.GetDocument(templateName), arguments);
+            return Transform(ResourcesManager.GetDocument(transformationName), ResourcesManager.GetDocument(templateName), arguments);
         }
 
         public static void CopyAdditionalParams(Dictionary<string, string> additionalParams, XsltArgumentList arguments)

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Xsf
+namespace FormConverter.Xsf
 {
     public class FormField
     { 

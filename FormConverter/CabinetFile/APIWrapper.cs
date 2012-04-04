@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace CabinetFile
+namespace FormConverter.CabinetFile
 {
 	/// <summary>
 	/// The FILE_IN_CABINET_INFO class provides information about a file found in the cabinet.

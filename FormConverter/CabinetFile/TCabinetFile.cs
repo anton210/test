@@ -3,8 +3,9 @@ using System.Collections;
 using System.ComponentModel;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Diagnostics;
 
-namespace CabinetFile
+namespace FormConverter.CabinetFile
 {
 	
 	public class TCabinetFile : CollectionBase, IBindingList, IDisposable
@@ -74,8 +75,7 @@ namespace CabinetFile
 				uint setupIterateCabinetAction = (uint)SetupIterateCabinetAction.Iterate;
 				if (!SetupApiWrapper.SetupIterateCabinet(value, 0, callback, setupIterateCabinetAction))
 				{
-					string errMsg = new Win32Exception((int)KernelApiWrapper.GetLastError()).Message;
-					Console.WriteLine(errMsg);
+                    throw new Win32Exception((int)KernelApiWrapper.GetLastError());
 				}	
 				m_Name = value;
 			}
@@ -456,8 +456,7 @@ namespace CabinetFile
 			uint setupIterateCabinetAction = (uint)SetupIterateCabinetAction.Extract;
 			if (!SetupApiWrapper.SetupIterateCabinet(this.Name, 0, callback, setupIterateCabinetAction))
 			{
-				string errMsg = new Win32Exception((int)KernelApiWrapper.GetLastError()).Message;
-				Console.WriteLine(errMsg);
+                throw new Win32Exception((int)KernelApiWrapper.GetLastError());
 			}	
 		}
 
@@ -491,8 +490,7 @@ namespace CabinetFile
 			uint setupIterateCabinetAction = (uint)SetupIterateCabinetAction.Extract;
 			if (!SetupApiWrapper.SetupIterateCabinet(this.Name, 0, callback, setupIterateCabinetAction))
 			{
-				string errMsg = new Win32Exception((int)KernelApiWrapper.GetLastError()).Message;
-				Console.WriteLine(errMsg);
+                throw new Win32Exception((int)KernelApiWrapper.GetLastError());
 			}	
 		}
 

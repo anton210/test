@@ -1,4 +1,4 @@
-﻿namespace Xsf
+﻿namespace FormConverter.Xsf
 {
     public interface IXsfView
     {

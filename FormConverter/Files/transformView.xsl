@@ -2,20 +2,20 @@
 <xsl:stylesheet version="1.0" 
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
                 xmlns:msxsl="urn:schemas-microsoft-com:xslt" 
-                exclude-result-prefixes="msxsl xxx" 
+                exclude-result-prefixes="msxsl mxsl" 
                 xmlns:xd="http://schemas.microsoft.com/office/infopath/2003" 
-                xmlns:ext="http://mcdean"
-                xmlns:xxx="http://mcderan/customxsl"
+                xmlns:ext="http://mcdean.com/2012-04-04T17:51:00"
+                xmlns:mxsl="http://mcdean.com/2012-04-04T17:51:00/xsl"
                 xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2011-07-27T21:37:51" >
   <!--xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2011-01-20T04:39:26" -->
 	<xsl:output method="xml" indent="yes"/>
-  <xsl:namespace-alias stylesheet-prefix="xxx" result-prefix="xsl"/>
+  <xsl:namespace-alias stylesheet-prefix="mxsl" result-prefix="xsl"/>
 	<xsl:param name="ScreenPadding" select="4"/>
 	<xsl:param name="ScreenWidth" select="768"/>
   <xsl:param name="LeaveStylesList" select="'width|height|border|border-bottom|border-top|border-left|border-right|border-bottom-color|border-bottom-left-radius|border-bottom-right-radius|border-bottom-style|border-bottom-width|border-left-color| border-left-style| border-left-width| border-right-color|border-right-style|border-right-width|border-top-color| border-top-left-radius|border-top-right-radius|border-top-style|border-top-width|vertical-align|overflow-x|overflow-y'"/>
 
   <xsl:template match="xsl:output">
-    <xxx:output method="html" indent="yes"/>
+    <mxsl:output method="html" indent="yes"/>
   </xsl:template>
   
   <!-- Initialize global variables -->
@@ -156,11 +156,9 @@
 			<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1.0"/>
 			<meta name="apple-mobile-web-app-capable" content="yes"/>
       <link rel="stylesheet" href="iPadTransform.css"/>
-      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
-
-      <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-      <script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
-     
+      <link rel="stylesheet" href="jquery.mobile-1.1.0-rc.1.min.css" />
+      <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+      <script type="text/javascript" src="jquery.mobile-1.1.0-rc.1.min.js"></script>
 			<script type="text/javascript" src="iPadTransform.js"/>
       <script type="text/javascript" src="Signature.js"/>
 		</xsl:copy>
@@ -196,7 +194,7 @@
       <xsl:attribute name="style">
         <xsl:value-of select="ext:SetStyle(ext:SetStyle(@style, 'height', '100%'), 'min-height', '36px')"/>
       </xsl:attribute>
-      <xxx:value-of select="{@xd:binding}"/>
+      <mxsl:value-of select="{@xd:binding}"/>
     </textarea>
   </xsl:template>
   
@@ -219,7 +217,7 @@
 					<xsl:attribute name="style">
             <xsl:value-of select="ext:SetStyle(ext:SetStyle(@style, 'height', '100%'), 'min-height', '36px')"/>
           </xsl:attribute>
-          <xxx:value-of select="{@xd:binding}"/>
+          <mxsl:value-of select="{@xd:binding}"/>
 				</textarea>
 			</xsl:when>
 			<xsl:otherwise>
@@ -227,9 +225,9 @@
 					<xsl:attribute name="style">
             <xsl:value-of select="ext:RemoveStyle(@style, 'height')"/>
           </xsl:attribute>
-          <xxx:attribute name="value">
-            <xxx:value-of select="{@xd:binding}"/>
-          </xxx:attribute>
+          <mxsl:attribute name="value">
+            <mxsl:value-of select="{@xd:binding}"/>
+          </mxsl:attribute>
 				</input>
 			</xsl:otherwise>
 		</xsl:choose>
@@ -251,9 +249,9 @@
 			<xsl:attribute name="name"><xsl:value-of select="@xd:binding"/></xsl:attribute>
 			<xsl:attribute name="id"><xsl:value-of select="@xd:CtrlId"/></xsl:attribute>
 
-      <xxx:if test="{@xd:binding}=&quot;{@xd:onValue}&quot;">
-        <xxx:attribute name="checked">checked</xxx:attribute>
-      </xxx:if>
+      <mxsl:if test="{@xd:binding}=&quot;{@xd:onValue}&quot;">
+        <mxsl:attribute name="checked">checked</mxsl:attribute>
+      </mxsl:if>
       
 		</xsl:copy>
 	</xsl:template>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Xml;
 
-namespace Xsf
+namespace FormConverter.Xsf
 {
     public class XsfSchemaMetadata
     {

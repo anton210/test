@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 
-namespace CabinetFile
+namespace FormConverter.CabinetFile
 {
 	/// <summary>
 	/// Represent file in cabinet file

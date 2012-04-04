@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
-using CabinetFile;
-using Xsf;
 using System.Xml;
 using System.Xml.Xsl;
+using FormConverter.Xsl;
+using FormConverter.Xsf;
+using FormConverter.CabinetFile;
 
 namespace FormConverter
 {
@@ -20,19 +21,21 @@ namespace FormConverter
                 return;
             }
 
-            
-            
+
+            FormConverter.CabinetFile.MemoryCabinetFile.CreateFromFile(args[0]);
+            /*
             var extractPath = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
 
             var extractor = new TCabinetFile(args[0]);
             extractor.OutputDirectory = extractPath;
             extractor.ExtractAll();
-            
+             */
+            /*
             var manifest = XsfManifest.FromFile(Path.Combine(extractPath, "manifest.xsf"));
 
             MemoryStream convertedMainViewStream;
             XsltArgumentList xslArgs = new XsltArgumentList();
-            xslArgs.AddExtensionObject(@"http://mcdean", new XPathExt());
+            xslArgs.AddExtensionObject(@"http://mcdean", new XpathExt());
             //First convert original xsl
             using (FileStream mainViewStream = new FileStream(Path.Combine(extractPath, manifest.DefaultView.TransformFileName), FileMode.Open, FileAccess.Read, FileShare.Read))
             {
@@ -77,12 +80,7 @@ namespace FormConverter
             //Then apply converted view.xsl to template
             using (FileStream templateStream = new FileStream(Path.Combine(extractPath, manifest.InitialTemplateFile), FileMode.Open, FileAccess.Read, FileShare.Read))
             {
-                /*
-                if (!Directory.Exists(outDir))
-                {
-                    Directory.CreateDirectory(outDir);
-                }
-                */
+                
                 using (MemoryStream transformResult = XslTransformer.Transform(convertedMainViewStream, templateStream, null))
                 {
                     using (FileStream outData = new FileStream(args[1], FileMode.Create, FileAccess.Write, FileShare.Read))
@@ -92,7 +90,7 @@ namespace FormConverter
                      
                 }
             }
-           
+           */
         }
     }
 }

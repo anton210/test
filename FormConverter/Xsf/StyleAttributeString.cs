@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Xml;
+using System.Diagnostics;
 
-namespace Xsf
+namespace FormConverter.Xsf
 {
     public class StyleAttributeString
     {
@@ -25,7 +26,11 @@ namespace Xsf
                 if ( String.IsNullOrEmpty(propPairString) ) continue;
                 
                 string[] pair = propPairString.Split(new[] {':'});
-                _properties.Add(pair[0].Trim().ToLowerInvariant(), pair[1].Trim().ToLowerInvariant());
+                Debug.Assert(pair.Length == 2);
+                if (pair.Length == 2)
+                {
+                    _properties.Add(pair[0].Trim().ToLowerInvariant(), pair[1].Trim().ToLowerInvariant());
+                }
             }
         }
 

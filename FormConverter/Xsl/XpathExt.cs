@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Xsf;
+using FormConverter.Xsf;
 
-namespace FormConverter
+namespace FormConverter.Xsl
 {
-    public class XPathExt
+    public class XpathExt
     {
         public System.Boolean Contains(string original, string what)
         {

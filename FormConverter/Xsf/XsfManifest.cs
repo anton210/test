@@ -5,19 +5,7 @@ using System.Linq;
 using System.Xml;
 using System.Xml.Schema;
 
-/*
-  <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" ></meta>
-        <link rel="stylesheet" href="iPhone.css" />
-        <link rel="stylesheet" href="CheckBox.css" />
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
-      </head>
- 
- */
-
-namespace Xsf
+namespace FormConverter.Xsf
 {
     public class XsfManifest
     {
@@ -104,6 +92,21 @@ namespace Xsf
             return new XsfManifest(manifest, schema);
         }
 
+        public static XsfManifest FromBundle(FilesBundle bundle)
+        {
+            var manifest = new XmlDocument();
+            manifest.Load(bundle["manifest.xsf"]);
+
+            var schemaMetadata = new XsfSchemaMetadata(manifest);
+            
+            XmlSchema schema = null;
+            using (StreamReader reader = new StreamReader(bundle[schemaMetadata.FileName]))
+            {
+                schema = XmlSchema.Read(reader, (s, e) => { /* empty validation handler */ });
+            }
+
+            return new XsfManifest(manifest, schema);
+        }
        
 
         private void FillField(FormField field, List<XmlSchemaElement> container, XmlSchemaElement refNode, IList<string> addedElements)
